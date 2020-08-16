@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "kaf2nd"
+    }
+  },
+  "defaultProject": "kaf2nd",
+  "cli": {
+    "analytics": "aebf196a-e89e-4787-a8d6-0be35fbd106b"
+  }
 }
