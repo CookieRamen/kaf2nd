@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {MetadataService} from '../service/metadata.service';
 
 @Component({
   selector: 'app-index',
@@ -7,9 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IndexComponent implements OnInit {
 
-  constructor() { }
+  metadata = {
+    title: 'index',
+    description: 'ページの説明',
+    keywords: '検索用キーワード',
+    image: 'ページの画像URL',
+    type: 'article',
+    url: window.location.href,
+    index: true
+  };
+
+  constructor(
+    private metaService: MetadataService
+  ) { }
 
   ngOnInit(): void {
+    this.metaService.setMeta(this.metadata);
   }
 
 }
