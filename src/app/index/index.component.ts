@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {MetadataService} from '../service/metadata.service';
 
 @Component({
@@ -20,7 +20,8 @@ export class IndexComponent implements OnInit {
 
   constructor(
     private metaService: MetadataService
-  ) { }
+  ) {
+  }
 
   ngOnInit(): void {
     this.metaService.setMeta(this.metadata);
