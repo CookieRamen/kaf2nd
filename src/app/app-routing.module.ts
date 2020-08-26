@@ -4,7 +4,7 @@ import {RouterModule, Routes} from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    loadChildren: () => import('./index/index.module').then(m => m.IndexModule)
+    loadChildren: () => import('./pages/index/index.module').then(m => m.IndexModule)
   }, {
     path: '**',
     loadChildren: () => import('./error/notfound/notfound.module').then(m => m.NotfoundModule)
