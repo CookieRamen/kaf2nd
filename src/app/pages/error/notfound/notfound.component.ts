@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {MetadataService} from '../../service/metadata.service';
+import {MetadataService} from '../../../service/metadata.service';
 
 @Component({
   selector: 'app-notfound',

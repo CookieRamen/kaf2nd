@@ -7,7 +7,7 @@ const routes: Routes = [
     loadChildren: () => import('./pages/index/index.module').then(m => m.IndexModule)
   }, {
     path: '**',
-    loadChildren: () => import('./error/notfound/notfound.module').then(m => m.NotfoundModule)
+    loadChildren: () => import('./pages/error/notfound/notfound.module').then(m => m.NotfoundModule)
   }
 ];
 
