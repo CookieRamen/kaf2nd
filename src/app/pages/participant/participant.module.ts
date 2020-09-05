@@ -1,8 +1,8 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
 
-import { ParticipantRoutingModule } from './participant-routing.module';
-import { ParticipantComponent } from './participant.component';
+import {ParticipantRoutingModule} from './participant-routing.module';
+import {ParticipantComponent} from './participant.component';
 
 
 @NgModule({
@@ -12,4 +12,5 @@ import { ParticipantComponent } from './participant.component';
     ParticipantRoutingModule
   ]
 })
-export class ParticipantModule { }
+export class ParticipantModule {
+}
