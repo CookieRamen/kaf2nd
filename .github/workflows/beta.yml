@@ -1,0 +1,43 @@
+name: CI
+
+on:
+  push:
+    branches:
+    - beta
+
+jobs:
+  lint:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v1
+      - name: Use Node.js 12.10
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.10
+      - name: Install dependencies
+        run: npm install
+      - name: Lint
+  test:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v1
+      - name: Use Node.js 12.10
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.10
+      - name: Install dependencies
+        run: npm install
+      - name: Test
+        run: npm test
+  build:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v1
+      - name: Use Node.js 12.10
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.10
+      - name: Install dependencies
+        run: npm install
+      - name: Build
+        run: npm run build --prod
