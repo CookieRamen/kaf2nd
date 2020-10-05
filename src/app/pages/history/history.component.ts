@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {DomSanitizer, SafeResourceUrl} from '@angular/platform-browser';
 
 interface History {
   date: string;
@@ -14,6 +15,7 @@ interface History {
   styleUrls: ['./history.component.scss']
 })
 export class HistoryComponent implements OnInit {
+  youtubeUrl = '';
   /*
     typeの種類
     Twitter埋め込み: twitter
@@ -27,13 +29,13 @@ export class HistoryComponent implements OnInit {
       title: 'サンプル',
       desc: '吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<br>何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<br>吾輩はここで始めて人間というものを見た。<br>しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。<br>この書生というのは時々我々を捕えて煮て食うという話である。',
       type: 'youtube',
-      url: 'https://www.youtube.com/watch?v=JxcKj2dMZM8'
+      url: 'https://www.youtube-nocookie.com/embed/JxcKj2dMZM8'
     }, {
       date: '2019/10/18',
       title: '花と椿と君',
       desc: '花と椿と君にてKAMITSUBAKI STUDIO発足が発表。<br>「理芽」、「春猿火」、「ヰ世界情緒」の三人のデビュー',
       type: 'youtube',
-      url: 'https://www.youtube.com/watch?v=kXyB94Ly-24'
+      url: 'https://www.youtube-nocookie.com/embed/kXyB94Ly-24'
     }, {
       date: '2019/10/18',
       title: '花譜のLINEスタンプ発表',
@@ -51,7 +53,7 @@ export class HistoryComponent implements OnInit {
       title: '【歌ってみた】粉雪 covered by 花譜',
       desc: '',
       type: 'youtube',
-      url: 'https://www.youtube.com/watch?v=wbaYN3DHyfY'
+      url: 'https://www.youtube-nocookie.com/embed/wbaYN3DHyfY'
     }, {
       date: '2019/10/28',
       title: '花譜展の告知',
@@ -63,7 +65,7 @@ export class HistoryComponent implements OnInit {
       title: '【歌ってみた】6900000000 covered by 花譜',
       desc: '',
       type: 'youtube',
-      url: 'https://www.youtube.com/watch?v=gWQBHbfzlxU'
+      url: 'https://www.youtube-nocookie.com/embed/gWQBHbfzlxU'
     }, {
       date: '2019/11/5',
       title: 'ロッキングオンジャパンインタビュー',
@@ -75,7 +77,7 @@ export class HistoryComponent implements OnInit {
       title: '【歌ってみた】さようなら、花泥棒さん covered by 花譜',
       desc: '',
       type: 'twitter',
-      url: 'https://www.youtube.com/watch?v=KYbULJesBpA&feature=youtu.be'
+      url: 'https://www.youtube-nocookie.com/embed/KYbULJesBpA'
     }, {
       date: '2019/11/8',
       title: '花譜クリスマスグッズ',
@@ -87,7 +89,7 @@ export class HistoryComponent implements OnInit {
       title: '【歌ってみた】嗤うマネキン covered by 花譜',
       desc: '',
       type: 'youtube',
-      url: 'https://www.youtube.com/watch?v=lUg_MOA8nZQ&feature=youtu.be'
+      url: 'https://www.youtube-nocookie.com/embed/lUg_MOA8nZQ'
     }, {
       date: '2019/11/15',
       title: '花譜展告知',
@@ -99,7 +101,7 @@ export class HistoryComponent implements OnInit {
       title: '美しく、闇 covered by 花譜',
       desc: '',
       type: 'youtube',
-      url: 'https://www.youtube.com/watch?v=0OJS3fy7Jy8&feature=youtu.be'
+      url: 'https://www.youtube-nocookie.com/embed/0OJS3fy7Jy8'
     }, {
       date: '2019/11/19',
       title: 'KAI-YOUインタビュー',
@@ -111,13 +113,13 @@ export class HistoryComponent implements OnInit {
       title: '花譜展開催',
       desc: '花譜の展覧会「花譜展」が東京都渋谷区「3.5D by KAMITSUBAKI STUDIO×PARCO」にて開催',
       type: 'youtube',
-      url: 'https://www.youtube.com/watch?v=M_nnqzBHIHo&feature=youtu.be'
+      url: 'https://www.youtube-nocookie.com/embed/M_nnqzBHIHo'
     }, {
       date: '2019/11/25',
       title: '【歌ってみた】ショパンと氷の白鍵 covered by 花譜',
       desc: '',
       type: 'youtube',
-      url: 'https://www.youtube.com/watch?v=SQLMMDYj6D0&feature=youtu.be'
+      url: 'https://www.youtube-nocookie.com/embed/SQLMMDYj6D0'
     }, {
       date: '2019/11/22',
       title: '花譜ホロモデル販売決定',
@@ -135,31 +137,31 @@ export class HistoryComponent implements OnInit {
       title: '未確認少女観測部スタート',
       desc: '',
       type: 'youtube',
-      url: 'https://www.youtube.com/watch?v=n2Vcu1hsFiA&feature=youtu.be'
+      url: 'https://www.youtube-nocookie.com/embed/n2Vcu1hsFiA'
     }, {
       date: '2019/12/3',
       title: '観測γ発表',
       desc: '',
       type: 'youtube',
-      url: 'https://www.youtube.com/watch?v=Bu19Bm6MM_0&feature=youtu.be'
+      url: 'https://www.youtube-nocookie.com/embed/Bu19Bm6MM_0'
     }, {
       date: '2019/12/4',
       title: '【歌ってみた】カフネ covered by 花譜',
       desc: '',
       type: 'youtube',
-      url: 'https://www.youtube.com/watch?v=2VpGmUQM37A&feature=youtu.be'
+      url: 'https://www.youtube-nocookie.com/embed/2VpGmUQM37A'
     }, {
       date: '2019/12/5',
       title: '「呼吸」販売開始',
       desc: '私のファースト写真集「呼吸-Atmung-」が3.5D店頭で先行販売。',
       type: 'youtube',
-      url: 'https://www.youtube.com/watch?v=Mnm9f0I9vBU&feature=youtu.be'
+      url: 'https://www.youtube-nocookie.com/embed/Mnm9f0I9vBU'
     }, {
       date: '2019/12/9',
       title: '【歌ってみた】ポワソン・ダヴリルについて covered by 花譜',
       desc: '',
       type: 'youtube',
-      url: 'https://www.youtube.com/watch?v=Kua1ye-H20Y&feature=youtu.be'
+      url: 'https://www.youtube-nocookie.com/embed/Kua1ye-H20Y'
     }, {
       date: '2019/12/15',
       title: '花譜展1.5リニューアル',
@@ -171,13 +173,13 @@ export class HistoryComponent implements OnInit {
       title: '花達と椿と君。vol.1',
       desc: '音楽から派生させた新プロジェクトNBM　by kamitsubakiを発足。また、2020年3月23日、不可解再の開催を発表',
       type: 'youtube',
-      url: 'https://www.youtube.com/watch?v=kXyB94Ly-244'
+      url: 'https://www.youtube-nocookie.com/embed/kXyB94Ly-244'
     }, {
       date: '2019/12/23',
       title: '【歌ってみた】インタビュア covered by 花譜',
       desc: '',
       type: 'youtube',
-      url: 'https://www.youtube.com/watch?v=aHYhNEmooEM&feature=youtu.be'
+      url: 'https://www.youtube-nocookie.com/embed/aHYhNEmooEM'
     }, {
       date: '2019/12/23',
       title: '観測γ一挙配信',
@@ -207,13 +209,13 @@ export class HistoryComponent implements OnInit {
       title: 'VMZ出演',
       desc: 'Vtuberの音楽番組VMZの初回ゲストとして花譜が出演',
       type: 'youtube',
-      url: 'https://www.youtube.com/watch?v=aP0jjmyFT_k&feature=youtu.be'
+      url: 'https://www.youtube-nocookie.com/embed/aP0jjmyFT_k'
     }, {
       date: '2020/1/1',
       title: '花譜 #46「新年」',
       desc: '',
       type: 'youtube',
-      url: 'https://www.youtube.com/watch?v=5xWeuwETAR0&feature=youtu.be'
+      url: 'https://www.youtube-nocookie.com/embed/5xWeuwETAR0'
     }, {
       date: '2020/1/1',
       title: '花譜謹賀新年福袋発売',
@@ -225,31 +227,31 @@ export class HistoryComponent implements OnInit {
       title: '花譜 #47「夜行バスにて（ろくろ Remix）」【オリジナルMV】',
       desc: '',
       type: 'youtube',
-      url: 'https://www.youtube.com/watch?v=syKrkrheKvY&feature=youtu.be'
+      url: 'https://www.youtube-nocookie.com/embed/syKrkrheKvY'
     }, {
       date: '2020/1/8',
       title: '花譜 #49 「私論理」 【オリジナルMV】',
       desc: '',
       type: 'youtube',
-      url: 'https://www.youtube.com/watch?v=Z6wEJLnNxMs&feature=emb_title'
+      url: 'https://www.youtube-nocookie.com/embed/Z6wEJLnNxMs&feature=emb_title'
     }, {
       date: '2020/1/10',
       title: '花譜　#50 「拾六」',
       desc: '',
       type: 'youtube',
-      url: 'https://www.youtube.com/watch?v=pkEeboJmw9U&feature=youtu.be'
+      url: 'https://www.youtube-nocookie.com/embed/pkEeboJmw9U'
     }, {
       date: '2020/1/20',
       title: '【歌ってみた】雨き声残響 covered by 花譜',
       desc: '',
       type: 'youtube',
-      url: 'https://www.youtube.com/watch?v=OcGhtS13eLs&feature=youtu.be'
+      url: 'https://www.youtube-nocookie.com/embed/OcGhtS13eLs'
     }, {
       date: '2020/1/30',
       title: '【歌ってみた】ストラトステラ covered by 花譜',
       desc: '',
       type: 'youtube',
-      url: 'https://www.youtube.com/watch?v=p3hDpKzNWhc&feature=youtu.be'
+      url: 'https://www.youtube-nocookie.com/embed/p3hDpKzNWhc'
     }, {
       date: '2020/1/30',
       title: 'ロッキングオンジャパンインタビュー',
@@ -261,19 +263,19 @@ export class HistoryComponent implements OnInit {
       title: '【歌ってみた】君が夜の海に還るまで covered by 花譜',
       desc: '',
       type: 'youtube',
-      url: 'https://www.youtube.com/watch?v=HCEIuHUd_fk&feature=youtu.be'
+      url: 'https://www.youtube-nocookie.com/embed/HCEIuHUd_fk'
     }, {
       date: '2020/2/12',
       title: '花譜 #51「不可解再御報告篇」',
       desc: '「不可解（再）」について3Dライブビューイング開催の開 催が決定',
       type: 'youtube',
-      url: 'https://www.youtube.com/watch?v=UHYtzmIcs4A&feature=youtu.be'
+      url: 'https://www.youtube-nocookie.com/embed/UHYtzmIcs4A'
     }, {
       date: '2020/2/19',
       title: '【歌ってみた】イヤホンと蝉時雨 covered by 花譜',
       desc: '',
       type: 'youtube',
-      url: 'https://www.youtube.com/watch?v=CraT4XYROZs&feature=youtu.be'
+      url: 'https://www.youtube-nocookie.com/embed/CraT4XYROZs'
     }, {
       date: '2020/2/27',
       title: '「不可解（再）」、無観客ライブに',
@@ -285,31 +287,31 @@ export class HistoryComponent implements OnInit {
       title: '【歌ってみた】銀河と未満病な二人 covered by 花譜',
       desc: '',
       type: 'youtube',
-      url: 'https://www.youtube.com/watch?v=sS9ZJDxGRXk&feature=youtu.be'
+      url: 'https://www.youtube-nocookie.com/embed/sS9ZJDxGRXk'
     }, {
       date: '2020/3/20',
       title: '【歌ってみた】あなたの夜が明けるまで covered by 花譜',
       desc: '',
       type: 'youtube',
-      url: 'https://www.youtube.com/watch?v=acIzTRnqUPA&feature=youtu.be'
+      url: 'https://www.youtube-nocookie.com/embed/acIzTRnqUPA'
     }, {
       date: '2020/3/14',
       title: '花譜 #52「深化」',
       desc: '',
       type: 'youtube',
-      url: 'https://www.youtube.com/watch?v=QqCM53KSLzw&feature=youtu.be'
+      url: 'https://www.youtube-nocookie.com/embed/QqCM53KSLzw'
     }, {
       date: '2020/3/16',
       title: '花譜 #53「青雀」',
       desc: '',
       type: 'youtube',
-      url: 'https://www.youtube.com/watch?v=Yj3FwdGutdk&feature=youtu.be'
+      url: 'https://www.youtube-nocookie.com/embed/Yj3FwdGutdk'
     }, {
       date: '2020/3/18',
       title: '花譜　#54　「糸-Virtual Reality-」',
       desc: '',
       type: 'youtube',
-      url: 'https://www.youtube.com/watch?v=Yj3FwdGutdk&feature=youtu.be'
+      url: 'https://www.youtube-nocookie.com/embed/Yj3FwdGutdk'
     }, {
       date: '2020/3/20',
       title: 'NTTブランド広告に花譜が出演',
@@ -321,7 +323,7 @@ export class HistoryComponent implements OnInit {
       title: '【歌ってみた】あまい covered by 花譜',
       desc: '',
       type: 'youtube',
-      url: 'https://www.youtube.com/watch?v=fGZQH85vGVQ&feature=youtu.be'
+      url: 'https://www.youtube-nocookie.com/embed/fGZQH85vGVQ'
     }, {
       date: '2020/3/21',
       title: 'Anitamaインタビュー',
@@ -333,7 +335,7 @@ export class HistoryComponent implements OnInit {
       title: '花譜 #55「不可解再前夜」',
       desc: '',
       type: 'youtube',
-      url: 'https://www.youtube.com/watch?v=SlCqwuB1IqQ&feature=youtu.be'
+      url: 'https://www.youtube-nocookie.com/embed/SlCqwuB1IqQ'
     }, {
       date: '2020/3/23',
       title: '朝日新聞朝刊に広告掲載',
@@ -351,13 +353,13 @@ export class HistoryComponent implements OnInit {
       title: '花譜 #55.5「不可解再御礼」',
       desc: '',
       type: 'youtube',
-      url: 'https://www.youtube.com/watch?v=MDWFtgUnY-c&feature=youtu.be'
+      url: 'https://www.youtube-nocookie.com/embed/MDWFtgUnY-c'
     }, {
       date: '2020/3/30',
       title: '【歌ってみた】電話をするよ covered by 花譜',
       desc: '',
       type: 'youtube',
-      url: 'https://www.youtube.com/watch?v=pB83CTLCET8&feature=youtu.be'
+      url: 'https://www.youtube-nocookie.com/embed/pB83CTLCET8'
     }, {
       date: '2020/4/3',
       title: 'ブラッククローバーEDに花譜「アンサー」',
@@ -375,7 +377,7 @@ export class HistoryComponent implements OnInit {
       title: '【歌ってみた】ふめつのこころ covered by 花譜',
       desc: '',
       type: 'youtube',
-      url: 'https://www.youtube.com/watch?v=I1HZ8glwdRs&feature=youtu.be'
+      url: 'https://www.youtube-nocookie.com/embed/I1HZ8glwdRs'
     }, {
       date: '2020/4/19',
       title: '【歌ってみた】宙ぶらりん covered by 花譜',
@@ -387,7 +389,7 @@ export class HistoryComponent implements OnInit {
       title: '【歌ってみた】愛の才能 covered by 花譜',
       desc: '',
       type: 'youtube',
-      url: 'https://www.youtube.com/watch?v=Koz-8KthqRo&feature=youtu.be'
+      url: 'https://www.youtube-nocookie.com/embed/Koz-8KthqRo'
     }, {
       date: '2020/5/5',
       title: '不可解再、再放送',
@@ -399,7 +401,7 @@ export class HistoryComponent implements OnInit {
       title: '花譜　#57 「危ノーマル」 【オリジナルMV】',
       desc: 'エナジードリンクZONEとのコラボ楽曲。キズナアイ、YOASOBIと共に楽曲を発表した',
       type: 'youtube',
-      url: 'https://www.youtube.com/watch?v=bmptCjSFEfg&feature=youtu.be'
+      url: 'https://www.youtube-nocookie.com/embed/bmptCjSFEfg'
     }, {
       date: '2020/5/13',
       title: 'X-girlで初のモデルに挑戦',
@@ -411,19 +413,19 @@ export class HistoryComponent implements OnInit {
       title: '【歌ってみた】美しい棘 covered by 花譜',
       desc: '',
       type: 'youtube',
-      url: 'https://www.youtube.com/watch?v=CZWf-jljj7M&feature=youtu.be'
+      url: 'https://www.youtube-nocookie.com/embed/CZWf-jljj7M'
     }, {
       date: '2020/5/30',
       title: '花達と椿と君。vol2',
       desc: '神椿市建設中を発表.アイスクリームライブの開催決定。<br>リアルとバーチャルの境界線のアーティストte\'resaデビュー',
       type: 'youtube',
-      url: 'https://www.youtube.com/watch?v=FktIvkDYLNo'
+      url: 'https://www.youtube-nocookie.com/embed/FktIvkDYLNo'
     }, {
       date: '2020/6/8',
       title: '花譜　#56 「戸惑いテレパシー」【オリジナルMV',
       desc: '「HAYABUSA EXPERIENCE by 3.5D × docomo」のテーマソング',
       type: 'youtube',
-      url: 'https://www.youtube.com/watch?v=3Dr91z1-Iug&feature=youtu.be'
+      url: 'https://www.youtube-nocookie.com/embed/3Dr91z1-Iug'
     }, {
       date: '2020/6/10',
       title: 'シングル「戸惑いテレパシー」が販売',
@@ -447,13 +449,13 @@ export class HistoryComponent implements OnInit {
       title: '【歌ってみた】ビームが撃てたらいいのに covered by 花譜',
       desc: '',
       type: 'youtube',
-      url: 'https://www.youtube.com/watch?v=3Clg1WYwhNk&feature=youtu.be'
+      url: 'https://www.youtube-nocookie.com/embed/3Clg1WYwhNk'
     }, {
       date: '2020/6/20',
       title: '【歌ってみた】小夜子 covered by 花譜',
       desc: '',
       type: 'youtube',
-      url: 'https://www.youtube.com/watch?v=waoAm-x96J0&feature=youtu.be'
+      url: 'https://www.youtube-nocookie.com/embed/waoAm-x96J0'
     }, {
       date: '2020/7/3',
       title: 'Tik Tokをスタート',
@@ -465,7 +467,7 @@ export class HistoryComponent implements OnInit {
       title: '花譜 #58「アンサー」【オリジナルMV】',
       desc: '',
       type: 'youtube',
-      url: 'https://www.youtube.com/watch?v=V0Olmwnnpj8&feature=youtu.be'
+      url: 'https://www.youtube-nocookie.com/embed/V0Olmwnnpj8'
     }, {
       date: '2020/7/9',
       title: '「景色」で日本沈没2020のグランドエンディングテーマを担当',
@@ -489,42 +491,42 @@ export class HistoryComponent implements OnInit {
       title: '花譜 #60「景色」【オリジナルMV】',
       desc: '日本沈没2020のグランドエンディングテーマ',
       type: 'youtube',
-      url: 'https://www.youtube.com/watch?v=46HgoDkRCns&feature=youtu.be'
+      url: 'https://www.youtube-nocookie.com/embed/46HgoDkRCns'
     }, {
       date: '2020/7/30',
       title: '「花達と椿と君。vol.3',
       desc: '不可解弐Q1、不可解弐Q2の開催を発表。',
       type: 'YouTube埋め込 み',
-      url: 'https://www.youtube.com/watch?v=Sy6gDiKW30A'
+      url: 'https://www.youtube-nocookie.com/embed/Sy6gDiKW30A'
     }, {
       date: '2020/8/1',
       title: '花譜　#56.1 「戸惑いテレパシー（柊キライRemix）」【オリジナルMV】',
       desc: '',
-      type: 'YouTube埋め込み',
-      url: 'https://www.youtube.com/watch?v=ZJtV9qvMfwA&feature=emb_title'
+      type: 'youtube',
+      url: 'https://www.youtube-nocookie.com/embed/ZJtV9qvMfwA&feature=emb_title'
     }, {
       date: '2020/8/2',
       title: '花譜 #56.2 「戸惑いテレパシー（Orangestar Remix）」【オリジナルMV】',
       desc: '',
-      type: 'YouTube埋め込み',
-      url: 'https://www.youtube.com/watch?v=F5kJZaHrfnI&feature=youtu.be'
+      type: 'youtube',
+      url: 'https://www.youtube-nocookie.com/embed/F5kJZaHrfnI'
     }, {
       date: '2020/8/3',
       title: '花譜　#56.3 「戸惑いテレパシー（羽生まゐご）」【オリジナルMV】',
       desc: '',
       type: 'YouTube埋 め込み',
-      url: 'https://www.youtube.com/watch?v=2Ku9y-IUuW0&feature=youtu.be'
+      url: 'https://www.youtube-nocookie.com/embed/2Ku9y-IUuW0'
     }, {
       date: '2020/8/7',
       title: 'Fanplus Musicインタビュー',
       desc: '',
-      type: 'Twitter埋め込み',
+      type: 'twitter',
       url: 'https://twitter.com/virtual_kaf/status/1291703320084586497?s=20'
     }, {
       date: '2020/8/9',
       title: 'Bilibili World 2020に出演',
       desc: '中国・上海国家会展中心で開催された「Bilibili World 2020」にてライブ披露',
-      type: 'その他',
+      type: 'other',
       url: 'https://www.bilibili.com/video/BV1qa4y1J7PH'
     }, {
       date: '2020/8/9',
@@ -543,7 +545,7 @@ export class HistoryComponent implements OnInit {
       title: '花譜 #61 「畢生よ」【オリジナルMV】',
       desc: '山田悠介最新作『俺の残機を投下します』PVテーマソング',
       type: 'youtube',
-      url: 'https://www.youtube.com/watch?v=v9uRKXJeYfI&feature=youtu.be'
+      url: 'https://www.youtube-nocookie.com/embed/v9uRKXJeYfI'
     }, {
       date: '2020/8/17',
       title: '「愛と花」発売決定',
@@ -555,7 +557,7 @@ export class HistoryComponent implements OnInit {
       title: '花譜 #62 「I SCREAM LIVE」【Trailer】',
       desc: '',
       type: 'youtube',
-      url: 'https://www.youtube.com/watch?v=JxcKj2dMZM8&feature=youtu.be'
+      url: 'https://www.youtube-nocookie.com/embed/JxcKj2dMZM8'
     }, {
       date: '2020/8/19',
       title: '花譜 Cover Live Album「I SCREAM LIVE」発売',
@@ -573,7 +575,7 @@ export class HistoryComponent implements OnInit {
       title: '【歌ってみた】ラプンツェル covered by 花譜',
       desc: '',
       type: 'youtube',
-      url: 'https://www.youtube.com/watch?v=c3bDrppty1w'
+      url: 'https://www.youtube-nocookie.com/embed/c3bDrppty1w'
     }, {
       date: '2020/8/31',
       title: 'ZONEにてキズナアイとコラボ',
@@ -591,7 +593,7 @@ export class HistoryComponent implements OnInit {
       title: 'Kizuna AI × 花譜 - ラブしい (Prod. 川谷絵音)【Official Music Video】',
       desc: '『ZONe』IMMERSIVE SONG PROJECT 2.0 参加楽曲',
       type: 'youtube',
-      url: 'https://www.youtube.com/watch?v=u4PUwnItinY&feature=youtu.be'
+      url: 'https://www.youtube-nocookie.com/embed/u4PUwnItinY'
     }, {
       date: '2020/9/11',
       title: '花譜展２開催',
@@ -601,10 +603,16 @@ export class HistoryComponent implements OnInit {
     }
   ];
 
-  constructor() {
+  constructor(
+    public sanitizer: DomSanitizer
+  ) {
   }
 
   ngOnInit(): void {
+  }
+
+  sanitize(url): SafeResourceUrl {
+    return this.sanitizer.bypassSecurityTrustResourceUrl(url);
   }
 
 }
