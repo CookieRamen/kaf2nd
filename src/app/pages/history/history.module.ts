@@ -3,13 +3,15 @@ import {CommonModule} from '@angular/common';
 
 import {HistoryRoutingModule} from './history-routing.module';
 import {HistoryComponent} from './history.component';
+import {VirtualScrollerModule} from 'ngx-virtual-scroller';
 
 
 @NgModule({
   declarations: [HistoryComponent],
   imports: [
     CommonModule,
-    HistoryRoutingModule
+    HistoryRoutingModule,
+    VirtualScrollerModule
   ]
 })
 export class HistoryModule {

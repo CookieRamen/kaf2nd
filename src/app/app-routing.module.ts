@@ -6,6 +6,9 @@ const routes: Routes = [
     path: '',
     loadChildren: () => import('./pages/index/index.module').then(m => m.IndexModule)
   }, {
+    path: 'history',
+    loadChildren: () => import('./pages/history/history.module').then(m => m.HistoryModule)
+  }, {
     path: '**',
     loadChildren: () => import('./pages/error/notfound/notfound.module').then(m => m.NotfoundModule)
   }
