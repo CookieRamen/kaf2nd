@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnDestroy, OnInit} from '@angular/core';
 import {MetadataService} from '../../service/metadata.service';
 
 @Component({
@@ -6,7 +6,7 @@ import {MetadataService} from '../../service/metadata.service';
   templateUrl: './index.component.html',
   styleUrls: ['./index.component.scss']
 })
-export class IndexComponent implements OnInit {
+export class IndexComponent implements OnInit, OnDestroy {
 
   metadata = {
     title: 'index',
@@ -25,6 +25,11 @@ export class IndexComponent implements OnInit {
 
   ngOnInit(): void {
     this.metaService.setMeta(this.metadata);
+    document.body.className = 'top';
+  }
+
+  ngOnDestroy(): void {
+    document.body.removeAttribute('class');
   }
 
 }
