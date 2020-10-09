@@ -1,6 +1,7 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
 
 import {HistoryComponent} from './history.component';
+import {VirtualScrollerModule} from 'ngx-virtual-scroller';
 
 describe('HistoryComponent', () => {
   let component: HistoryComponent;
@@ -8,7 +9,10 @@ describe('HistoryComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [HistoryComponent]
+      declarations: [HistoryComponent],
+      imports: [
+        VirtualScrollerModule,
+      ]
     })
       .compileComponents();
   });

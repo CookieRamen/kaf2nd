@@ -23,7 +23,7 @@ export class HistoryComponent implements OnInit {
     テキストのみ: text
     その他: other
   */
-  history: History[] = [
+  histories: History[] = [
     {
       date: '2000/1/1',
       title: 'サンプル',
@@ -602,6 +602,9 @@ export class HistoryComponent implements OnInit {
       url: 'https://twitter.com/virtual_kaf/status/1303977351663869952?s=20'
     }
   ];
+  history = [];
+  loading = true;
+  timer;
 
   constructor(
     public sanitizer: DomSanitizer
@@ -609,6 +612,23 @@ export class HistoryComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    // 仮想スクロールでindex代入したら表示分しかカウントしてくれなかったので強引に
+    let i = 0;
+    this.histories.forEach(history => {
+      this.history[i] = history;
+      this.history[i].index = i;
+      i++;
+    });
+  }
+
+  // スクロール中にiframeがロードとアンロードを繰り返して重いので
+  changeLoading(event): void {
+    this.loading = true;
+    clearTimeout(this.timer);
+    this.timer = setTimeout(() => {
+      this.loading = false;
+      console.log(this.loading);
+    }, 1000);
   }
 
   sanitize(url): SafeResourceUrl {
