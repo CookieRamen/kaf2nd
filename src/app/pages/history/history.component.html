@@ -1,14 +1,23 @@
 <div class="container">
-  <virtual-scroller #scroll [items]="history" [enableUnequalChildrenSizes]="true">
-    <history-component *ngFor="let data of scroll.viewPortItems">
+  <virtual-scroller #scroll [items]="history" [enableUnequalChildrenSizes]="true" (vsChange)="changeLoading($event)">
+    <history-component *ngFor="let data of scroll.viewPortItems" [randomHeight]="true">
       <p>{{data.date}}</p>
       <p>{{data.title}}</p>
       <p [innerHTML]="data.desc"></p>
-      <p *ngIf="data.type == 'twitter'">Twitter</p>
+      <p *ngIf="data.type == 'twitter'" style="width: 560px; height: 315px;">
+        <iframe *ngIf="!loading" width="560" height="315"
+                [src]="sanitize('https://twitter-embed.arkjp.net/?url=' + data?.url)"
+                frameborder="0"
+                loading="lazy"
+                allowfullscreen></iframe>
+        <img *ngIf="loading" src="/assets/img/loading.png" alt="loading" width="560" height="315">
+      </p>
       <p *ngIf="data.type == 'youtube'" style="width: 560px; height: 315px;">
-        <iframe width="560" height="315" [src]="sanitize(data?.url)" frameborder="0" allow="encrypted-media"
+        <iframe *ngIf="!loading" width="560" height="315" [src]="sanitize(data?.url)" frameborder="0"
+                loading="lazy"
                 allowfullscreen>
         </iframe>
+        <img *ngIf="loading" src="/assets/img/loading.png" alt="loading" width="560" height="315">
       </p>
       <p *ngIf="data.type == 'text'">Text Only</p>
       <p *ngIf="data.type == 'other'">Other</p>
