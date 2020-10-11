@@ -627,6 +627,7 @@ export class HistoryComponent implements OnInit {
     clearTimeout(this.timer);
     this.timer = setTimeout(() => {
       this.loading = false;
+      window[`twttr`].widgets.load();
       console.log(this.loading);
     }, 1000);
   }

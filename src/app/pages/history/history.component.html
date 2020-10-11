@@ -1,24 +1,22 @@
 <div class="container">
-  <virtual-scroller #scroll [items]="history" [enableUnequalChildrenSizes]="true" (vsChange)="changeLoading($event)">
-    <history-component *ngFor="let data of scroll.viewPortItems" [randomHeight]="true">
+  <virtual-scroller #scroll [items]="history"
+                    [enableUnequalChildrenSizes]="true"
+                    [bufferAmount]="10"
+                    [scrollThrottlingTime]="1000"
+                    [scrollDebounceTime]="1000"
+                    [parentScroll]="scroll.window"
+                    (vsUpdate)="changeLoading($event)">
+    <history-component *ngFor="let data of scroll.viewPortItems">
       <p>{{data.date}}</p>
       <p>{{data.title}}</p>
       <p [innerHTML]="data.desc"></p>
-      <p *ngIf="data.type == 'twitter'" style="width: 560px; height: 315px;">
-        <iframe *ngIf="!loading" width="560" height="315"
-                [src]="sanitize('https://twitter-embed.arkjp.net/?url=' + data?.url)"
-                frameborder="0"
-                loading="lazy"
-                allowfullscreen></iframe>
-        <img *ngIf="loading" src="/assets/img/loading.png" alt="loading" width="560" height="315">
-      </p>
-      <p *ngIf="data.type == 'youtube'" style="width: 560px; height: 315px;">
-        <iframe *ngIf="!loading" width="560" height="315" [src]="sanitize(data?.url)" frameborder="0"
-                loading="lazy"
-                allowfullscreen>
-        </iframe>
-        <img *ngIf="loading" src="/assets/img/loading.png" alt="loading" width="560" height="315">
-      </p>
+      <blockquote class="twitter-tweet" *ngIf="data.type == 'twitter'">
+        <a class="twitter-tweet" *ngIf="data.type == 'twitter'" [href]="data?.url"></a>
+      </blockquote>
+      <div class="embed-responsive embed-responsive-16by9">
+        <iframe *ngIf="data.type == 'youtube' && !loading" [src]="sanitize(data?.url)" allowfullscreen></iframe>
+        <canvas *ngIf="loading"></canvas>
+      </div>
       <p *ngIf="data.type == 'text'">Text Only</p>
       <p *ngIf="data.type == 'other'">Other</p>
       <a [href]="data.url">{{data.url}}</a>
