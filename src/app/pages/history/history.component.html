@@ -1,9 +1,6 @@
 <div class="container">
   <virtual-scroller #scroll [items]="history"
                     [enableUnequalChildrenSizes]="true"
-                    [bufferAmount]="10"
-                    [scrollThrottlingTime]="1000"
-                    [scrollDebounceTime]="1000"
                     [parentScroll]="scroll.window"
                     (vsUpdate)="changeLoading($event)">
     <history-component *ngFor="let data of scroll.viewPortItems">
@@ -14,8 +11,12 @@
         <a class="twitter-tweet" *ngIf="data.type == 'twitter'" [href]="data?.url"></a>
       </blockquote>
       <div class="embed-responsive embed-responsive-16by9">
-        <iframe *ngIf="data.type == 'youtube' && !loading" [src]="sanitize(data?.url)" allowfullscreen></iframe>
-        <canvas *ngIf="loading"></canvas>
+        <iframe *ngIf="data.type == 'youtube' && youtubePreview === data.index"
+                [src]="sanitize('https://www.youtube-nocookie.com/embed/' + data?.url + '?autoplay=1')" allowfullscreen></iframe>
+        <div class="youtube-preview" *ngIf="youtubePreview !== data.index">
+          <img class="embed-responsive-item"
+               [src]="'//i.ytimg.com/vi/' + data?.url + '/maxresdefault.jpg'" (click)="youtubePreview = data.index">
+        </div>
       </div>
       <p *ngIf="data.type == 'text'">Text Only</p>
       <p *ngIf="data.type == 'other'">Other</p>
