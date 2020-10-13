@@ -34,16 +34,24 @@
     .illustration {
       width: 100%;
       height: 100%;
-      background-image: url("/assets/img/index/section1.png");
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center;
     }
   }
+
   .section1 {
     transform: translateZ(0.8px) scale(0.2) translateY(-200%);
     text-shadow: 1px 1px 1.5px #fff;
   }
+}
+
+#illustration2 {
+  background-image: url("/assets/img/index/section2.png");
+}
+
+#illustration3 {
+  background-image: url("/assets/img/index/section3.png");
 }
 
 @media (min-width: 768px) {
@@ -78,19 +86,19 @@
 
 #title {
   position: relative;
-  background-image: url("https://dummyimage.com/2560x1440/d6f0ff/fff");
+  background-image: url("/assets/img/bg/bg1.png");
   background-size: cover;
   background-position: center;
   z-index: 2;
 
-  .illustration {
+  #illustration1 {
     position: absolute;
     width: 100%;
     height: 100vh;
     margin: auto;
     left: 0;
     right: 0;
-    background-image: url("/assets/img/index/top.png");
+    background-image: url("/assets/img/index/illustration1.png");
     background-size: contain;
     background-repeat: no-repeat;
     transform: translateZ(0.5px) scale(0.5) translateX(0) translateY(0);
@@ -98,7 +106,7 @@
 }
 
 @media (min-width: 768px) {
-  #title .illustration {
+  #title #illustration1 {
     height: 200vh;
     background-position: center;
     transform: translateZ(0.5px) scale(0.5) translateX(0) translateY(-45%);
@@ -109,20 +117,20 @@
 }
 
 #section1:before {
-  background-image: url("https://dummyimage.com/2560x1440/ffd6fb/fff");
+  background-image: url("/assets/img/bg/bg2.png");
   transform: translateZ(-1px) scale(2);
 }
 
 #section2 {
-  background-image: url("https://dummyimage.com/2560x1440/deffd6/fff");
+  background-image: url("/assets/img/bg/bg3.png");
   z-index: 2;
 }
 
 #section3:before {
-  background-image: url("https://dummyimage.com/2560x1440/ffd6d6/fff");
+  background-image: url("/assets/img/bg/bg4.png");
   transform: translateZ(-1px) scale(2);
 }
 
 #section4 {
-  background-image: url("https://dummyimage.com/2560x1440/222/fff");
+  background-image: url("/assets/img/bg/bg5.png");
 }

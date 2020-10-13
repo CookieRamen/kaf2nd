@@ -1,1 +1,11 @@
-<p>comments works!</p>
+<div class="container">
+  <div class="row">
+    <ng-template ngFor let-data [ngForOf]="comments">
+      <div class="col-md-6">
+        <h4>{{data?.nickname}}</h4>
+        <a [href]="'https://twitter.com/' + data?.twitter">@{{data?.twitter}}</a>
+        <p>{{data?.comments}}</p>
+      </div>
+    </ng-template>
+  </div>
+</div>

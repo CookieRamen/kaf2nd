@@ -12,6 +12,9 @@ const routes: Routes = [
     path: 'illustration',
     loadChildren: () => import('./pages/illustration/illustration.module').then(m => m.IllustrationModule)
   }, {
+    path: 'comments',
+    loadChildren: () => import('./pages/comments/comments.module').then(m => m.CommentsModule)
+  }, {
     path: '**',
     loadChildren: () => import('./pages/error/notfound/notfound.module').then(m => m.NotfoundModule)
   }

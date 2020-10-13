@@ -8,7 +8,7 @@
       <h5>{{data.title}}</h5>
       <p>{{data.date}}</p>
       <p class="font-weight-bold" [innerHTML]="data.desc"></p>
-      <div class="embed-contents mx-5 text-center">
+      <div class="embed-contents text-center">
         <blockquote class="twitter-tweet" *ngIf="data.type == 'twitter'" style="min-height: 300px">
           <a class="twitter-tweet" *ngIf="data.type == 'twitter'" [href]="data?.url"></a>
         </blockquote>
