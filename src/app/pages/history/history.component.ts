@@ -26,12 +26,6 @@ export class HistoryComponent implements OnInit {
   */
   histories: History[] = [
     {
-      date: '2000/1/1',
-      title: 'サンプル',
-      desc: '吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<br>何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<br>吾輩はここで始めて人間というものを見た。<br>しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。<br>この書生というのは時々我々を捕えて煮て食うという話である。',
-      type: 'youtube',
-      url: 'JxcKj2dMZM8'
-    }, {
       date: '2019/10/18',
       title: '花と椿と君',
       desc: '花と椿と君にてKAMITSUBAKI STUDIO発足が発表。<br>「理芽」、「春猿火」、「ヰ世界情緒」の三人のデビュー',
@@ -42,13 +36,13 @@ export class HistoryComponent implements OnInit {
       title: '花譜のLINEスタンプ発表',
       desc: '',
       type: 'twitter',
-      url: 'https://twitter.com/virtual_kaf/status/1185103774068723713?s=20'
+      url: 'https://twitter.com/virtual_kaf/status/1185103774068723713'
     }, {
       date: '2019/10/18',
       title: 'TPNN by KAF、observersブランドを発表',
       desc: '',
       type: 'twitter',
-      url: 'https://twitter.com/virtual_kaf/status/1185170345910661120?s=20'
+      url: 'https://twitter.com/virtual_kaf/status/1185170345910661120'
     }, {
       date: '2019/10/21',
       title: '【歌ってみた】粉雪 covered by 花譜',
@@ -60,7 +54,7 @@ export class HistoryComponent implements OnInit {
       title: '花譜展の告知',
       desc: '',
       type: 'twitter',
-      url: 'https://twitter.com/virtual_kaf/status/1188747576138334208?s=20'
+      url: 'https://twitter.com/virtual_kaf/status/1188747576138334208'
     }, {
       date: '2019/10/30',
       title: '【歌ってみた】6900000000 covered by 花譜',
@@ -72,19 +66,19 @@ export class HistoryComponent implements OnInit {
       title: 'ロッキングオンジャパンインタビュー',
       desc: '',
       type: 'twitter',
-      url: 'https://twitter.com/virtual_kaf/status/1191646492940857344?s=20'
+      url: 'https://twitter.com/virtual_kaf/status/1191646492940857344'
     }, {
       date: '2019/11/5',
       title: '【歌ってみた】さようなら、花泥棒さん covered by 花譜',
       desc: '',
-      type: 'twitter',
+      type: 'youtube',
       url: 'KYbULJesBpA'
     }, {
       date: '2019/11/8',
       title: '花譜クリスマスグッズ',
       desc: '',
       type: 'twitter',
-      url: 'https://twitter.com/kaf_info/status/1192759202009116672?s=20'
+      url: 'https://twitter.com/kaf_info/status/1192759202009116672'
     }, {
       date: '2019/11/11',
       title: '【歌ってみた】嗤うマネキン covered by 花譜',
@@ -108,7 +102,7 @@ export class HistoryComponent implements OnInit {
       title: 'KAI-YOUインタビュー',
       desc: '',
       type: 'twitter',
-      url: 'https://twitter.com/KAI_YOU_ed/status/1196714733744734209?s=20'
+      url: 'https://twitter.com/KAI_YOU_ed/status/1196714733744734209'
     }, {
       date: '2019/11/22',
       title: '花譜展開催',
@@ -125,14 +119,14 @@ export class HistoryComponent implements OnInit {
       date: '2019/11/22',
       title: '花譜ホロモデル販売決定',
       desc: '',
-      type: 'youtube',
-      url: 'https://twitter.com/holomodels/status/1197735073291747329?s=20'
+      type: 'twitter',
+      url: 'https://twitter.com/holomodels/status/1197735073291747329'
     }, {
       date: '2019/12/1',
       title: '「のとく番」最優秀GoodMusic賞を受賞',
       desc: 'キズナアイの冠番組「のとく番」にてGoodMusic賞 を受賞。後のVMZ出演の布石となる',
       type: 'twitter',
-      url: 'https://twitter.com/virtual_kaf/status/1201337440633442305?s=20'
+      url: 'https://twitter.com/virtual_kaf/status/1201337440633442305'
     }, {
       date: '2019/12/1',
       title: '未確認少女観測部スタート',
@@ -168,13 +162,13 @@ export class HistoryComponent implements OnInit {
       title: '花譜展1.5リニューアル',
       desc: '',
       type: 'twitter',
-      url: 'https://twitter.com/virtual_kaf/status/1206491861684117504?s=20'
+      url: 'https://twitter.com/virtual_kaf/status/1206491861684117504'
     }, {
       date: '2019/12/20',
       title: '花達と椿と君。vol.1',
       desc: '音楽から派生させた新プロジェクトNBM　by kamitsubakiを発足。また、2020年3月23日、不可解再の開催を発表',
       type: 'youtube',
-      url: 'kXyB94Ly-244'
+      url: 'kXyB94Ly-24'
     }, {
       date: '2019/12/23',
       title: '【歌ってみた】インタビュア covered by 花譜',
@@ -186,25 +180,25 @@ export class HistoryComponent implements OnInit {
       title: '観測γ一挙配信',
       desc: '',
       type: 'twitter',
-      url: 'https://twitter.com/virtual_kaf/status/1209051487298449409?s=20'
+      url: 'https://twitter.com/virtual_kaf/status/1209051487298449409'
     }, {
       date: '2019/12/25',
       title: '花譜のLINE着せ替え発売',
       desc: '',
       type: 'twitter',
-      url: 'https://twitter.com/kaf_info/status/1209656959663624192?s=20'
+      url: 'https://twitter.com/kaf_info/status/1209656959663624192'
     }, {
       date: '2019/12/25',
       title: '観測γ発売',
       desc: '',
       type: 'twitter',
-      url: 'https://twitter.com/PIEDPIPER2045/status/1209820192810749952?s=20'
+      url: 'https://twitter.com/PIEDPIPER2045/status/1209820192810749952'
     }, {
       date: '2019/12/26',
       title: 'Vティーク Vol.5発売',
       desc: 'Vtuber雑誌であるVティークvol.5発売。表紙を花譜が担当し、花譜 や運営のインタビューなどが掲載。花譜好きVtuberのコメントが話題になった',
       type: 'twitter',
-      url: 'https://twitter.com/kaf_info/status/1209989772824825857?s=20'
+      url: 'https://twitter.com/kaf_info/status/1209989772824825857'
     }, {
       date: '2019/12/27',
       title: 'VMZ出演',
@@ -222,7 +216,7 @@ export class HistoryComponent implements OnInit {
       title: '花譜謹賀新年福袋発売',
       desc: '',
       type: 'twitter',
-      url: 'https://twitter.com/3_5dd/status/1212559335051522048?s=20'
+      url: 'https://twitter.com/3_5dd/status/1212559335051522048'
     }, {
       date: '2020/1/3',
       title: '花譜 #47「夜行バスにて（ろくろ Remix）」【オリジナルMV】',
@@ -234,7 +228,7 @@ export class HistoryComponent implements OnInit {
       title: '花譜 #49 「私論理」 【オリジナルMV】',
       desc: '',
       type: 'youtube',
-      url: 'Z6wEJLnNxMs&feature=emb_title'
+      url: 'Z6wEJLnNxMs'
     }, {
       date: '2020/1/10',
       title: '花譜　#50 「拾六」',
@@ -258,7 +252,7 @@ export class HistoryComponent implements OnInit {
       title: 'ロッキングオンジャパンインタビュー',
       desc: '',
       type: 'twitter',
-      url: 'https://twitter.com/kaf_info/status/1222764189883650048?s=20'
+      url: 'https://twitter.com/kaf_info/status/1222764189883650048'
     }, {
       date: '2020/2/9',
       title: '【歌ってみた】君が夜の海に還るまで covered by 花譜',
@@ -282,7 +276,7 @@ export class HistoryComponent implements OnInit {
       title: '「不可解（再）」、無観客ライブに',
       desc: '',
       type: 'twitter',
-      url: 'https://twitter.com/virtual_kaf/status/1232954021582798849?s=20'
+      url: 'https://twitter.com/virtual_kaf/status/1232954021582798849'
     }, {
       date: '2020/3/1',
       title: '【歌ってみた】銀河と未満病な二人 covered by 花譜',
@@ -318,7 +312,7 @@ export class HistoryComponent implements OnInit {
       title: 'NTTブランド広告に花譜が出演',
       desc: '',
       type: 'twitter',
-      url: 'https://twitter.com/kaf_info/status/1240835807268589569?s=20'
+      url: 'https://twitter.com/kaf_info/status/1240835807268589569'
     }, {
       date: '2020/3/21',
       title: '【歌ってみた】あまい covered by 花譜',
@@ -330,7 +324,7 @@ export class HistoryComponent implements OnInit {
       title: 'Anitamaインタビュー',
       desc: '中国のwebメディアAnitamaに花譜・運営のインタビューが掲載',
       type: 'twitter',
-      url: 'https://twitter.com/kaf_info/status/1241323508887482370?s=20'
+      url: 'https://twitter.com/kaf_info/status/1241323508887482370'
     }, {
       date: '2020/3/22',
       title: '花譜 #55「不可解再前夜」',
@@ -342,13 +336,13 @@ export class HistoryComponent implements OnInit {
       title: '朝日新聞朝刊に広告掲載',
       desc: '',
       type: 'twitter',
-      url: 'https://twitter.com/kaf_info/status/1241847124037263360?s=20'
+      url: 'https://twitter.com/kaf_info/status/1241847124037263360'
     }, {
       date: '2020/3/23',
       title: '「不可解（再）」',
       desc: '',
       type: 'twitter',
-      url: 'https://twitter.com/virtual_kaf/status/1242010569785278465?s=20'
+      url: 'https://twitter.com/virtual_kaf/status/1242010569785278465'
     }, {
       date: '2020/3/23',
       title: '花譜 #55.5「不可解再御礼」',
@@ -366,13 +360,13 @@ export class HistoryComponent implements OnInit {
       title: 'ブラッククローバーEDに花譜「アンサー」',
       desc: '',
       type: 'twitter',
-      url: 'https://twitter.com/virtual_kaf/status/1245849214233403392?s=20'
+      url: 'https://twitter.com/virtual_kaf/status/1245849214233403392'
     }, {
       date: '2020/4/9',
       title: '花譜、神椿のメンバーを紹介',
       desc: '',
       type: 'twitter',
-      url: 'https://twitter.com/virtual_kaf/status/1248151200186257416?s=20'
+      url: 'https://twitter.com/virtual_kaf/status/1248151200186257416'
     }, {
       date: '2020/4/10',
       title: '【歌ってみた】ふめつのこころ covered by 花譜',
@@ -384,7 +378,7 @@ export class HistoryComponent implements OnInit {
       title: '【歌ってみた】宙ぶらりん covered by 花譜',
       desc: '',
       type: 'twitter',
-      url: 'https://twitter.com/virtual_kaf/status/1255074451017752582?s=20'
+      url: 'https://twitter.com/virtual_kaf/status/1255074451017752582'
     }, {
       date: '2020/4/29',
       title: '【歌ってみた】愛の才能 covered by 花譜',
@@ -396,7 +390,7 @@ export class HistoryComponent implements OnInit {
       title: '不可解再、再放送',
       desc: '',
       type: 'twitter',
-      url: 'https://twitter.com/virtual_kaf/status/1257667632871817216?s=20'
+      url: 'https://twitter.com/virtual_kaf/status/1257667632871817216'
     }, {
       date: '2020/5/11',
       title: '花譜　#57 「危ノーマル」 【オリジナルMV】',
@@ -408,7 +402,7 @@ export class HistoryComponent implements OnInit {
       title: 'X-girlで初のモデルに挑戦',
       desc: '',
       type: 'twitter',
-      url: 'https://twitter.com/virtual_kaf/status/1260480873117487104?s=20'
+      url: 'https://twitter.com/virtual_kaf/status/1260480873117487104'
     }, {
       date: '2020/5/19',
       title: '【歌ってみた】美しい棘 covered by 花譜',
@@ -432,19 +426,19 @@ export class HistoryComponent implements OnInit {
       title: 'シングル「戸惑いテレパシー」が販売',
       desc: '柊キライ、Orangestar、羽生まゐごによるリミック スが収録',
       type: 'twitter',
-      url: 'https://twitter.com/virtual_kaf/status/1270638499570388992?s=20'
+      url: 'https://twitter.com/virtual_kaf/status/1270638499570388992'
     }, {
       date: '2020/6/10',
       title: '「アニメージュ」に花譜・理芽掲載',
       desc: '',
-      type: 'youtube',
-      url: 'https://twitter.com/kamitsubaki_jp/status/1270626552774967296?s=20'
+      type: 'twitter',
+      url: 'https://twitter.com/kamitsubaki_jp/status/1270626552774967296'
     }, {
       date: '2020/6/14',
       title: 'アイスクリームライブ',
       desc: 'KAF LIVE STREAMING COVER LIVE「アイスクリームライブ」を開催。カバー曲で構成された配信ライブ。',
       type: 'twitter',
-      url: 'https://twitter.com/virtual_kaf/status/1272162619592343558?s=20'
+      url: 'https://twitter.com/virtual_kaf/status/1272162619592343558'
     }, {
       date: '2020/6/18',
       title: '【歌ってみた】ビームが撃てたらいいのに covered by 花譜',
@@ -462,7 +456,7 @@ export class HistoryComponent implements OnInit {
       title: 'Tik Tokをスタート',
       desc: '',
       type: 'twitter',
-      url: 'https://twitter.com/virtual_kaf/status/1278976938023870465?s=20'
+      url: 'https://twitter.com/virtual_kaf/status/1278976938023870465'
     }, {
       date: '2020/7/8',
       title: '花譜 #58「アンサー」【オリジナルMV】',
@@ -474,19 +468,19 @@ export class HistoryComponent implements OnInit {
       title: '「景色」で日本沈没2020のグランドエンディングテーマを担当',
       desc: '',
       type: 'twitter',
-      url: 'https://twitter.com/virtual_kaf/status/1281151747440783360?s=20'
+      url: 'https://twitter.com/virtual_kaf/status/1281151747440783360'
     }, {
       date: '2020/7/20',
       title: 'HAYABUSA EXPERIENCE by 3.5D × docomo ONLINE EXHIBITION',
       desc: '花譜とdocomoのコラボ展示会。VRChat、webで開催された',
       type: 'twitter',
-      url: 'https://twitter.com/kaf_info/status/1285046821337706496?s=20'
+      url: 'https://twitter.com/kaf_info/status/1285046821337706496'
     }, {
       date: '2020/7/22',
       title: '花譜2nd EP「花と解答」発売',
       desc: '',
       type: 'twitter',
-      url: 'https://twitter.com/kaf_info/status/1285772342707159040?s=20'
+      url: 'https://twitter.com/kaf_info/status/1285772342707159040'
     }, {
       date: '2020/7/22',
       title: '花譜 #60「景色」【オリジナルMV】',
@@ -504,7 +498,7 @@ export class HistoryComponent implements OnInit {
       title: '花譜　#56.1 「戸惑いテレパシー（柊キライRemix）」【オリジナルMV】',
       desc: '',
       type: 'youtube',
-      url: 'ZJtV9qvMfwA&feature=emb_title'
+      url: 'ZJtV9qvMfwA'
     }, {
       date: '2020/8/2',
       title: '花譜 #56.2 「戸惑いテレパシー（Orangestar Remix）」【オリジナルMV】',
@@ -522,7 +516,7 @@ export class HistoryComponent implements OnInit {
       title: 'Fanplus Musicインタビュー',
       desc: '',
       type: 'twitter',
-      url: 'https://twitter.com/virtual_kaf/status/1291703320084586497?s=20'
+      url: 'https://twitter.com/virtual_kaf/status/1291703320084586497'
     }, {
       date: '2020/8/9',
       title: 'Bilibili World 2020に出演',
@@ -534,13 +528,13 @@ export class HistoryComponent implements OnInit {
       title: '神椿無電室',
       desc: '',
       type: 'twitter',
-      url: 'https://twitter.com/kamitsubaki_jp/status/1292340169585000448?s=20'
+      url: 'https://twitter.com/kamitsubaki_jp/status/1292340169585000448'
     }, {
       date: '2020/8/12',
       title: 'サブスク配信スタート',
       desc: '',
       type: 'twitter',
-      url: 'https://twitter.com/virtual_kaf/status/1293464474532233216?s=20'
+      url: 'https://twitter.com/virtual_kaf/status/1293464474532233216'
     }, {
       date: '2020/8/13',
       title: '花譜 #61 「畢生よ」【オリジナルMV】',
@@ -552,7 +546,7 @@ export class HistoryComponent implements OnInit {
       title: '「愛と花」発売決定',
       desc: 'キズナアイとコラボ楽曲CD',
       type: 'twitter',
-      url: 'https://twitter.com/virtual_kaf/status/1295288324928675840?s=20'
+      url: 'https://twitter.com/virtual_kaf/status/1295288324928675840'
     }, {
       date: '2020/8/19',
       title: '花譜 #62 「I SCREAM LIVE」【Trailer】',
@@ -564,13 +558,13 @@ export class HistoryComponent implements OnInit {
       title: '花譜 Cover Live Album「I SCREAM LIVE」発売',
       desc: '',
       type: 'twitter',
-      url: 'https://twitter.com/virtual_kaf/status/1296009815240486913?s=20'
+      url: 'https://twitter.com/virtual_kaf/status/1296009815240486913'
     }, {
       date: '2020/8/26',
       title: 'テレ朝「サンパチスター」の主題歌を担当',
       desc: '芸人×声優の二次元お笑いプロジェクト番組「 サンチパスター」の主題歌を花譜が担当',
       type: 'twitter',
-      url: 'https://twitter.com/kaf_info/status/1298561485803646976?s=20'
+      url: 'https://twitter.com/kaf_info/status/1298561485803646976'
     }, {
       date: '2020/8/28',
       title: '【歌ってみた】ラプンツェル covered by 花譜',
@@ -582,13 +576,13 @@ export class HistoryComponent implements OnInit {
       title: 'ZONEにてキズナアイとコラボ',
       desc: '',
       type: 'twitter',
-      url: 'https://twitter.com/virtual_kaf/status/1300278582887890944?s=20'
+      url: 'https://twitter.com/virtual_kaf/status/1300278582887890944'
     }, {
       date: '2020/9/1',
       title: '花譜展２開催を発表',
       desc: '',
       type: 'twitter',
-      url: 'https://twitter.com/virtual_kaf/status/1300720488688177152?s=20'
+      url: 'https://twitter.com/virtual_kaf/status/1300720488688177152'
     }, {
       date: '2020/9/7',
       title: 'Kizuna AI × 花譜 - ラブしい (Prod. 川谷絵音)【Official Music Video】',
@@ -600,7 +594,7 @@ export class HistoryComponent implements OnInit {
       title: '花譜展２開催',
       desc: '9月11日〜10月3日の前半、10月5日〜10月28日の後半という二部構成',
       type: 'twitter',
-      url: 'https://twitter.com/virtual_kaf/status/1303977351663869952?s=20'
+      url: 'https://twitter.com/virtual_kaf/status/1303977351663869952'
     }
   ];
   history = [];

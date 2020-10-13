@@ -9,6 +9,9 @@ const routes: Routes = [
     path: 'history',
     loadChildren: () => import('./pages/history/history.module').then(m => m.HistoryModule)
   }, {
+    path: 'illustration',
+    loadChildren: () => import('./pages/illustration/illustration.module').then(m => m.IllustrationModule)
+  }, {
     path: '**',
     loadChildren: () => import('./pages/error/notfound/notfound.module').then(m => m.NotfoundModule)
   }
