@@ -1,1 +1,21 @@
-<p>illustration works!</p>
+<ng-template [ngIf]="preview">
+  <div (click)="preview = null" class="overlay">
+    <ngx-progressive-image-loader [imageRatio]="preview.ratio"
+                                  [placeholderImageSrc]="'https://us-s3.arkjp.net/kaf2th/illustrations/thumbnail/' + preview?.img">
+      <img [alt]="preview?.name" [src]="'https://us-s3.arkjp.net/kaf2th/illustrations/' + preview?.img"
+           ngxProgressiveImage width="100%">
+    </ngx-progressive-image-loader>
+  </div>
+</ng-template>
+
+<div class="container">
+  <div class="row align-items-center">
+    <ng-template [ngForOf]="data" let-data ngFor>
+      <div class="col-md-6 col-lg-3 text-center p-3">
+        <img (click)="preview = data" [alt]="data?.name"
+             [src]="'https://us-s3.arkjp.net/kaf2th/illustrations/thumbnail/' + data?.img" width="100%">
+      </div>
+    </ng-template>
+
+  </div>
+</div>
