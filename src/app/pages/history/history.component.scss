@@ -42,6 +42,7 @@ hr {
   transition: all .25s;
   pointer-events: none;
 }
+
 .youtube-preview:hover::before {
   opacity: 1;
   filter: gray(0);

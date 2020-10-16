@@ -1,24 +1,24 @@
 <div class="container">
-  <virtual-scroller #scroll [items]="history"
-                    [enableUnequalChildrenSizes]="true"
-                    [parentScroll]="scroll.window"
+  <virtual-scroller #scroll (vsUpdate)="changeLoading($event)"
                     [bufferAmount]="1"
-                    (vsUpdate)="changeLoading($event)">
+                    [enableUnequalChildrenSizes]="true"
+                    [items]="history"
+                    [parentScroll]="scroll.window">
     <history-component *ngFor="let data of scroll.viewPortItems">
       <h5>{{data.title}}</h5>
       <p>{{data.date}}</p>
-      <p class="font-weight-bold" [innerHTML]="data.desc"></p>
+      <p [innerHTML]="data.desc" class="font-weight-bold"></p>
       <div class="embed-contents text-center">
-        <blockquote class="twitter-tweet" *ngIf="data.type == 'twitter'" style="min-height: 300px">
-          <a class="twitter-tweet" *ngIf="data.type == 'twitter'" [href]="data?.url"></a>
+        <blockquote *ngIf="data.type == 'twitter'" class="twitter-tweet" style="min-height: 300px">
+          <a *ngIf="data.type == 'twitter'" [href]="data?.url" class="twitter-tweet"></a>
         </blockquote>
-        <div class="embed-responsive embed-responsive-16by9" *ngIf="data.type == 'youtube'">
+        <div *ngIf="data.type == 'youtube'" class="embed-responsive embed-responsive-16by9">
           <iframe *ngIf="youtubePreview === data.index"
                   [src]="sanitize('https://www.youtube-nocookie.com/embed/' + data?.url + '?autoplay=1')"
                   allowfullscreen></iframe>
-          <div class="youtube-preview" *ngIf="youtubePreview !== data.index">
-            <img class="embed-responsive-item"
-                 [src]="'//i.ytimg.com/vi/' + data?.url + '/maxresdefault.jpg'" (click)="youtubePreview = data.index">
+          <div *ngIf="youtubePreview !== data.index" class="youtube-preview">
+            <img (click)="youtubePreview = data.index"
+                 [src]="'//i.ytimg.com/vi/' + data?.url + '/maxresdefault.jpg'" class="embed-responsive-item">
           </div>
         </div>
       </div>
