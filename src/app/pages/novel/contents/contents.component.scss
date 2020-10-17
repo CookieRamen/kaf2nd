@@ -3,7 +3,7 @@
   text-orientation: mixed;
   padding: 30px;
   line-height: 1.4;
-  max-height: 100%;
+  height: calc(100% - 64px);
 
   h4 {
     position: relative;

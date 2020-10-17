@@ -1,8 +1,8 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
 
-import { ContentsRoutingModule } from './contents-routing.module';
-import { ContentsComponent } from './contents.component';
+import {ContentsRoutingModule} from './contents-routing.module';
+import {ContentsComponent} from './contents.component';
 
 
 @NgModule({
@@ -12,4 +12,5 @@ import { ContentsComponent } from './contents.component';
     ContentsRoutingModule
   ]
 })
-export class ContentsModule { }
+export class ContentsModule {
+}
