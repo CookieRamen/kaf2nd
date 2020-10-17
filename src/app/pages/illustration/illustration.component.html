@@ -12,8 +12,11 @@
   <div class="row align-items-center">
     <ng-template [ngForOf]="data" let-data ngFor>
       <div class="col-md-6 col-lg-3 text-center p-3">
-        <img (click)="preview = data" [alt]="data?.name"
-             [src]="'https://us-s3.arkjp.net/kaf2th/illustrations/thumbnail/' + data?.img" width="100%">
+        <ngx-progressive-image-loader [imageRatio]="data.ratio">
+          <img (click)="preview = data" [alt]="data?.name"
+               [src]="'https://us-s3.arkjp.net/kaf2th/illustrations/thumbnail/' + data?.img"
+               ngxProgressiveImage width="100%">
+        </ngx-progressive-image-loader>
       </div>
     </ng-template>
 
