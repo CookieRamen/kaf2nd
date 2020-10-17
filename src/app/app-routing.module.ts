@@ -18,6 +18,9 @@ const routes: Routes = [
     path: 'novel',
     loadChildren: () => import('./pages/novel/novel.module').then(m => m.NovelModule)
   }, {
+    path: 'questionnaire',
+    loadChildren: () => import('./pages/questionnaire/questionnaire.module').then(m => m.QuestionnaireModule)
+  }, {
     path: '**',
     loadChildren: () => import('./pages/error/notfound/notfound.module').then(m => m.NotfoundModule)
   }

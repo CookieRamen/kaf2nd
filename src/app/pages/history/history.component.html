@@ -1,11 +1,11 @@
-<div class="container">
+<div class="container my-3">
   <virtual-scroller #scroll (vsUpdate)="changeLoading($event)"
                     [bufferAmount]="1"
                     [enableUnequalChildrenSizes]="true"
                     [items]="history"
                     [parentScroll]="scroll.window">
     <history-component *ngFor="let data of scroll.viewPortItems">
-      <h5>{{data.title}}</h5>
+      <h4>{{data.title}}</h4>
       <p>{{data.date}}</p>
       <p [innerHTML]="data.desc" class="font-weight-bold"></p>
       <div class="embed-contents text-center">

@@ -32,8 +32,8 @@ body {
 
 .overlay {
   img.loaded, .ngx-image-placeholder .placeholder-loading-image {
-    width: initial !important;
-    height: initial !important;
+    width: auto !important;
+    height: auto !important;
     max-width: 95vw !important;
     max-height: 95vh !important;
     position: fixed !important;
@@ -42,5 +42,29 @@ body {
     right: 0 !important;
     bottom: 0 !important;
     margin: auto !important;
+  }
+  img.loaded {
+    z-index: 3 !important;
+  }
+  .placeholder-loading-image {
+    z-index: 1 !important;
+  }
+}
+
+.chart-legend .legend-label {
+  color: #000 !important;
+  font-weight: bold !important;
+  font-family: sans-serif;
+}
+
+@media (max-width: 769px) {
+  .menu-overlay {
+    .button {
+      margin: 0 !important;
+      transform: scale(.5);
+    }
+  }
+  .chart-legend {
+    display: none !important;
   }
 }

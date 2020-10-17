@@ -14,7 +14,8 @@ import {IImageLoaderOptions, NgxProgressiveImageLoaderModule} from 'ngx-progress
     NgxProgressiveImageLoaderModule.forRoot({
       rootMargin: '30px',
       threshold: 0.1,
-      filter: 'blur(3px) drop-shadow(0 0 0.75rem crimson)'
+      filter: 'blur(3px)',
+      placeholderImageSrc: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAMAAAAoyzS7AAAAA1BMVEX///+nxBvIAAAACklEQVQI12NgAAAAAgAB4iG8MwAAAABJRU5ErkJggg=='
     } as IImageLoaderOptions)
   ]
 })

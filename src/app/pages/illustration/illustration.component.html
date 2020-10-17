@@ -1,5 +1,9 @@
 <ng-template [ngIf]="preview">
   <div (click)="preview = null" class="overlay">
+    <div class="twitter" *ngIf="preview?.twitter">
+      <a [href]="'https://twitter.com/' + preview?.twitter" target="_blank">@{{preview?.twitter}}</a>
+    </div>
+    <img class="loading" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiBzdHlsZT0ibWFyZ2luOiBhdXRvOyBiYWNrZ3JvdW5kOiBub25lOyBkaXNwbGF5OiBibG9jazsgc2hhcGUtcmVuZGVyaW5nOiBhdXRvOyIgd2lkdGg9IjIwMHB4IiBoZWlnaHQ9IjIwMHB4IiB2aWV3Qm94PSIwIDAgMTAwIDEwMCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ieE1pZFlNaWQiPgo8cmVjdCB4PSIxNy41IiB5PSIzMCIgd2lkdGg9IjE1IiBoZWlnaHQ9IjQwIiBmaWxsPSIjZGQwNDU5Ij4KICA8YW5pbWF0ZSBhdHRyaWJ1dGVOYW1lPSJ5IiByZXBlYXRDb3VudD0iaW5kZWZpbml0ZSIgZHVyPSIxcyIgY2FsY01vZGU9InNwbGluZSIga2V5VGltZXM9IjA7MC41OzEiIHZhbHVlcz0iMTg7MzA7MzAiIGtleVNwbGluZXM9IjAgMC41IDAuNSAxOzAgMC41IDAuNSAxIiBiZWdpbj0iLTAuMnMiPjwvYW5pbWF0ZT4KICA8YW5pbWF0ZSBhdHRyaWJ1dGVOYW1lPSJoZWlnaHQiIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIiBkdXI9IjFzIiBjYWxjTW9kZT0ic3BsaW5lIiBrZXlUaW1lcz0iMDswLjU7MSIgdmFsdWVzPSI2NDs0MDs0MCIga2V5U3BsaW5lcz0iMCAwLjUgMC41IDE7MCAwLjUgMC41IDEiIGJlZ2luPSItMC4ycyI+PC9hbmltYXRlPgo8L3JlY3Q+CjxyZWN0IHg9IjQyLjUiIHk9IjMwIiB3aWR0aD0iMTUiIGhlaWdodD0iNDAiIGZpbGw9IiNmZDk5YTciPgogIDxhbmltYXRlIGF0dHJpYnV0ZU5hbWU9InkiIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIiBkdXI9IjFzIiBjYWxjTW9kZT0ic3BsaW5lIiBrZXlUaW1lcz0iMDswLjU7MSIgdmFsdWVzPSIyMC45OTk5OTk5OTk5OTk5OTY7MzA7MzAiIGtleVNwbGluZXM9IjAgMC41IDAuNSAxOzAgMC41IDAuNSAxIiBiZWdpbj0iLTAuMXMiPjwvYW5pbWF0ZT4KICA8YW5pbWF0ZSBhdHRyaWJ1dGVOYW1lPSJoZWlnaHQiIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIiBkdXI9IjFzIiBjYWxjTW9kZT0ic3BsaW5lIiBrZXlUaW1lcz0iMDswLjU7MSIgdmFsdWVzPSI1OC4wMDAwMDAwMDAwMDAwMTs0MDs0MCIga2V5U3BsaW5lcz0iMCAwLjUgMC41IDE7MCAwLjUgMC41IDEiIGJlZ2luPSItMC4xcyI+PC9hbmltYXRlPgo8L3JlY3Q+CjxyZWN0IHg9IjY3LjUiIHk9IjMwIiB3aWR0aD0iMTUiIGhlaWdodD0iNDAiIGZpbGw9IiNlYjY4OTYiPgogIDxhbmltYXRlIGF0dHJpYnV0ZU5hbWU9InkiIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIiBkdXI9IjFzIiBjYWxjTW9kZT0ic3BsaW5lIiBrZXlUaW1lcz0iMDswLjU7MSIgdmFsdWVzPSIyMC45OTk5OTk5OTk5OTk5OTY7MzA7MzAiIGtleVNwbGluZXM9IjAgMC41IDAuNSAxOzAgMC41IDAuNSAxIj48L2FuaW1hdGU+CiAgPGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iaGVpZ2h0IiByZXBlYXRDb3VudD0iaW5kZWZpbml0ZSIgZHVyPSIxcyIgY2FsY01vZGU9InNwbGluZSIga2V5VGltZXM9IjA7MC41OzEiIHZhbHVlcz0iNTguMDAwMDAwMDAwMDAwMDE7NDA7NDAiIGtleVNwbGluZXM9IjAgMC41IDAuNSAxOzAgMC41IDAuNSAxIj48L2FuaW1hdGU+CjwvcmVjdD4KPCEtLSBbbGRpb10gZ2VuZXJhdGVkIGJ5IGh0dHBzOi8vbG9hZGluZy5pby8gLS0+PC9zdmc+">
     <ngx-progressive-image-loader [imageRatio]="preview.ratio"
                                   [placeholderImageSrc]="'https://us-s3.arkjp.net/kaf2th/illustrations/thumbnail/' + preview?.img">
       <img [alt]="preview?.name" [src]="'https://us-s3.arkjp.net/kaf2th/illustrations/' + preview?.img"
@@ -8,15 +12,12 @@
   </div>
 </ng-template>
 
-<div class="container">
+<div class="container my-3">
   <div class="row align-items-center">
     <ng-template [ngForOf]="data" let-data ngFor>
       <div class="col-md-6 col-lg-3 text-center p-3">
-        <ngx-progressive-image-loader [imageRatio]="data.ratio">
-          <img (click)="preview = data" [alt]="data?.name"
-               [src]="'https://us-s3.arkjp.net/kaf2th/illustrations/thumbnail/' + data?.img"
-               ngxProgressiveImage width="100%">
-        </ngx-progressive-image-loader>
+        <div class="img-preview" (click)="preview = data" [style.background-position]="data?.position" [style.background-image]="'url(https://us-s3.arkjp.net/kaf2th/illustrations/thumbnail/' + data?.img + ')'"></div>
+        <div class="name">{{data?.name}}</div>
       </div>
     </ng-template>
 
