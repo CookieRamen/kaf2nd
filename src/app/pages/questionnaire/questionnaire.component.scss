@@ -1,0 +1,10 @@
+.pie-chart-parent {
+  max-width: 100%;
+  min-height: 64vh;
+  overflow: auto;
+}
+
+ngx-charts-pie-chart {
+  display: flex;
+  min-height: 64vh;
+}

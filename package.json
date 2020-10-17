@@ -1,6 +1,6 @@
 {
   "name": "kaf2nd",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -12,6 +12,7 @@
   "private": true,
   "dependencies": {
     "@angular/animations": "^10.1.4",
+    "@angular/cdk": "^10.2.5",
     "@angular/common": "^10.1.4",
     "@angular/compiler": "^10.1.4",
     "@angular/core": "^10.1.4",
@@ -21,6 +22,8 @@
     "@angular/platform-browser-dynamic": "^10.1.4",
     "@angular/router": "^10.1.4",
     "@ng-bootstrap/ng-bootstrap": "^7.0.0",
+    "@swimlane/ngx-charts": "^16.0.0",
+    "animate.css": "^4.1.1",
     "bootstrap": "^4.5.2",
     "ngx-progressive-image-loader": "^4.0.0",
     "ngx-virtual-scroller": "^4.0.3",

@@ -1,0 +1,30 @@
+:host ::ng-deep .textbox {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  padding: 30px;
+  line-height: 1.4;
+  height: calc(100% - 64px);
+
+  h4 {
+    position: relative;
+    font-weight: bold;
+    height: 100%;
+
+    span {
+      position: absolute;
+      bottom: 20%;
+    }
+  }
+
+  p {
+    font-family: 游明朝,"Yu Mincho",YuMincho,"Hiragino Mincho ProN","Hiragino Mincho Pro",HGS明朝E,メイリオ,Meiryo,serif;
+    font-size: 1.2rem;
+    white-space: pre-wrap;
+  }
+
+}
+
+.container {
+  overflow-x: auto;
+  background-color: rgb(255 248 234 / 75%);
+}
