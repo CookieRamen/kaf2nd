@@ -22,6 +22,9 @@ const routes: Routes = [
       }, {
         path: '笛吹きの預言',
         loadChildren: () => import('./fuefuki/fuefuki.module').then(m => m.FuefukiModule)
+      }, {
+        path: '爆弾',
+        loadChildren: () => import('./bakudan/bakudan.module').then(m => m.BakudanModule)
       }
     ]
   }

@@ -54,6 +54,16 @@ export class IllustrationComponent implements OnInit {
       img: '12e41d72.jpg',
       ratio: 680 / 680
     }, {
+      name: '春美',
+      twitter: 'harumin2040',
+      img: '9a5039c2.jpg',
+      ratio: 1080 / 1920
+    }, {
+      name: '春美',
+      twitter: 'harumin2040',
+      img: 'ace5fd19.png',
+      ratio: 2000 / 1400
+    }, {
       name: 'ふる',
       twitter: 'huru_anrg',
       img: '12e41e44.jpg',
@@ -68,6 +78,86 @@ export class IllustrationComponent implements OnInit {
       twitter: 'Setsuna_flash00',
       img: '12e41fc0.jpg',
       ratio: 680 / 680
+    }, {
+      name: 'わつを',
+      twitter: 'watuwo',
+      img: '9a5024f0.png',
+      ratio: 2480 / 3508
+    }, {
+      name: '匚白',
+      twitter: 'Hakojiro_',
+      img: '9a502626.png',
+      ratio: 1280 / 1280
+    }, {
+      name: '菅原 集一',
+      twitter: 'syu_sugawara',
+      img: '9a50290a.png',
+      ratio: 3840 / 2160
+    }, {
+      name: '神椿中国海賊組全体メンバー',
+      twitter: 'xiaole_3349',
+      img: '9a5023ec.jpg',
+      ratio: 3400 / 4600
+    }, {
+      name: '神椿中国海賊組全体メンバー',
+      twitter: 'xiaole_3349',
+      img: '9a502d60.png',
+      ratio: 5200 / 3827
+    }, {
+      name: '神椿中国海賊組全体メンバー',
+      twitter: 'xiaole_3349',
+      img: '9a502fae.png',
+      ratio: 3800 / 2300
+    }, {
+      name: '神椿中国海賊組全体メンバー',
+      twitter: 'xiaole_3349',
+      img: '9a502bc6.png',
+      ratio: 5200 / 4000
+    }, {
+      name: '神椿中国海賊組全体メンバー',
+      twitter: 'xiaole_3349',
+      img: '9a502c98.png',
+      ratio: 4769 / 6319
+    }, {
+      name: 'Sailiven',
+      twitter: 'sailiven',
+      img: '9a50318e.png',
+      ratio: 2894 / 4093
+    }, {
+      name: 'aka',
+      twitter: 'Jg0YAhpRupPgksc',
+      img: '9a503260.png',
+      ratio: 800 / 600
+    }, {
+      name: '芽森（memori）',
+      twitter: 'memori0801',
+      img: '9a50331e.png',
+      ratio: 4893 / 2894
+    }, {
+      name: 'せん',
+      twitter: '1000cork3',
+      img: '9a503774.png',
+      ratio: 834 / 1194
+    }, {
+      name: 'チャンプルー',
+      twitter: 'Chan_Puru0917',
+      img: '9a50383c.png',
+      ratio: 3403 / 5016
+    }, {
+      name: 'オオグソクムシ.gzl',
+      twitter: 'oh_gusokumushi',
+      img: '9a503904.png',
+      ratio: 1920 / 1080
+    },{
+      name: '若草',
+      twitter: 'wakakusa_16',
+      img: '9a503a80.png',
+      ratio: 3328 / 3328
+    }, {
+      name: 'はるさん',
+      twitter: 'The_trail780',
+      img: '9a503b48.jpg',
+      ratio: 576 / 1024
     }, {
       name: '星麓Cafuné',
       twitter: null,
@@ -228,91 +318,6 @@ export class IllustrationComponent implements OnInit {
       twitter: null,
       img: '63cdcaf2.png',
       ratio: 4134 / 4134
-    }, {
-      name: 'わつを',
-      twitter: 'watuwo',
-      img: '9a5024f0.png',
-      ratio: 2480 / 3508
-    }, {
-      name: '匚白',
-      twitter: 'Hakojiro_',
-      img: '9a502626.png',
-      ratio: 1280 / 1280
-    }, {
-      name: '菅原 集一',
-      twitter: 'syu_sugawara',
-      img: '9a50290a.png',
-      ratio: 3840 / 2160
-    }, {
-      name: '神椿中国海賊組全体メンバー',
-      twitter: 'xiaole_3349',
-      img: '9a5023ec.jpg',
-      ratio: 3400 / 4600
-    }, {
-      name: '神椿中国海賊組全体メンバー',
-      twitter: 'xiaole_3349',
-      img: '9a502d60.png',
-      ratio: 5200 / 3827
-    }, {
-      name: '神椿中国海賊組全体メンバー',
-      twitter: 'xiaole_3349',
-      img: '9a502fae.png',
-      ratio: 3800 / 2300
-    }, {
-      name: '神椿中国海賊組全体メンバー',
-      twitter: 'xiaole_3349',
-      img: '9a502bc6.png',
-      ratio: 5200 / 4000
-    }, {
-      name: '神椿中国海賊組全体メンバー',
-      twitter: 'xiaole_3349',
-      img: '9a502c98.png',
-      ratio: 4769 / 6319
-    }, {
-      name: 'Sailiven',
-      twitter: 'sailiven',
-      img: '9a50318e.png',
-      ratio: 2894 / 4093
-    }, {
-      name: 'aka',
-      twitter: 'Jg0YAhpRupPgksc',
-      img: '9a503260.png',
-      ratio: 800 / 600
-    }, {
-      name: '芽森（memori）',
-      twitter: 'memori0801',
-      img: '9a50331e.png',
-      ratio: 4893 / 2894
-    }, {
-      name: 'せん',
-      twitter: '1000cork3',
-      img: '9a503774.png',
-      ratio: 834 / 1194
-    }, {
-      name: 'チャンプルー',
-      twitter: 'Chan_Puru0917',
-      img: '9a50383c.png',
-      ratio: 3403 / 5016
-    }, {
-      name: 'オオグソクムシ.gzl',
-      twitter: 'oh_gusokumushi',
-      img: '9a503904.png',
-      ratio: 1920 / 1080
-    }, {
-      name: '春美',
-      twitter: 'harumin2040',
-      img: '9a5039c2.jpg',
-      ratio: 1080 / 1920
-    }, {
-      name: '若草',
-      twitter: 'wakakusa_16',
-      img: '9a503a80.png',
-      ratio: 3328 / 3328
-    }, {
-      name: 'はるさん',
-      twitter: 'The_trail780',
-      img: '9a503b48.jpg',
-      ratio: 576 / 1024
     }
   ];
 
