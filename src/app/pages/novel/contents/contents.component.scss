@@ -1,0 +1,21 @@
+:host ::ng-deep .textbox {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  padding: 30px;
+  line-height: 1.4;
+  max-height: 100%;
+
+  h4 {
+    position: relative;
+    height: 100%;
+
+    span {
+      position: absolute;
+      bottom: 20%;
+    }
+  }
+}
+
+.container {
+  overflow-x: auto;
+}

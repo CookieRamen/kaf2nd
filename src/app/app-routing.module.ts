@@ -15,6 +15,9 @@ const routes: Routes = [
     path: 'comments',
     loadChildren: () => import('./pages/comments/comments.module').then(m => m.CommentsModule)
   }, {
+    path: 'novel',
+    loadChildren: () => import('./pages/novel/novel.module').then(m => m.NovelModule)
+  }, {
     path: '**',
     loadChildren: () => import('./pages/error/notfound/notfound.module').then(m => m.NotfoundModule)
   }
