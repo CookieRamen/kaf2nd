@@ -125,6 +125,14 @@ export class ParticipantComponent implements OnInit {
     name: '星麓Cafuné',
     twitter: null,
     type: 1
+  }, {
+    name: 'アカネ',
+    twitter: 'AKANE_ratami_',
+    type: 1
+  }, {
+    name: 'おかゆ',
+    twitter: 'luck_OKY',
+    type: 1
   }
   ];
 
