@@ -122,6 +122,18 @@ export class IllustrationComponent implements OnInit {
       ratio: 1280 / 1280,
       position: 'center'
     }, {
+      name: 'アカネ',
+      twitter: 'AKANE_ratami_',
+      img: 'k0x6adkc.png',
+      ratio: 1335 / 772,
+      position: 'center'
+    }, {
+      name: 'おかゆ',
+      twitter: 'luck_OKY',
+      img: 'g703bylx.png',
+      ratio: 1181 / 1748,
+      position: 'center'
+    }, {
       name: '菅原 集一',
       twitter: 'syu_sugawara',
       img: '9a50290a.png',
