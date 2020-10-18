@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {DomSanitizer, SafeResourceUrl} from '@angular/platform-browser';
+import {MetadataService} from '../../service/metadata.service';
 
 interface History {
   date: string;
@@ -15,6 +16,15 @@ interface History {
   styleUrls: ['./history.component.scss']
 })
 export class HistoryComponent implements OnInit {
+  metadata = {
+    title: '年表 | 花譜弐周年。',
+    description: '花譜弐周年を記念した有志による非公式年表',
+    keywords: '花譜,二周年,神椿,Vtuber,バーチャルシンガー,年表,活動,YouTube,Twitter',
+    image: '/assets/img/icon.png',
+    type: 'article',
+    url: window.location.href,
+    index: true
+  };
   youtubeUrl = '';
   youtubePreview;
   /*
@@ -602,11 +612,13 @@ export class HistoryComponent implements OnInit {
   timer;
 
   constructor(
-    public sanitizer: DomSanitizer
+    public sanitizer: DomSanitizer,
+    private metaService: MetadataService,
   ) {
   }
 
   ngOnInit(): void {
+    this.metaService.setMeta(this.metadata);
     // 仮想スクロールでindex代入したら表示分しかカウントしてくれなかったので強引に
     let i = 0;
     this.histories.forEach(history => {
