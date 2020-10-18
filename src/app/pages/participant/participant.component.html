@@ -1,1 +1,46 @@
-<p>participant works!</p>
+<div class="container my-4">
+  <h2>参加者一覧</h2>
+  <div class="row">
+    <div class="col-md-6 my-4">
+      <h3>イラスト</h3>
+      <ng-template ngFor let-data [ngForOf]="illustrations">
+        <a *ngIf="data?.twitter" [href]="'https://twitter.com/' + data?.twitter" target="_blank">{{data?.name}}</a>
+        <span *ngIf="!data?.twitter"  class="user">{{data?.name}}</span>
+      </ng-template>
+    </div>
+    <div class="col-md-6 my-4">
+      <h3>コメント</h3>
+      <ng-template ngFor let-data [ngForOf]="comments">
+        <a *ngIf="data?.twitter" [href]="'https://twitter.com/' + data?.twitter" target="_blank">{{data?.name}}</a>
+        <span *ngIf="!data?.twitter"  class="user">{{data?.name}}</span>
+      </ng-template>
+    </div>
+    <div class="col-md-6 my-4">
+      <h3>歌ってみた</h3>
+      <ng-template ngFor let-data [ngForOf]="singing">
+        <a *ngIf="data?.twitter" [href]="'https://twitter.com/' + data?.twitter" target="_blank">{{data?.name}}</a>
+        <span *ngIf="!data?.twitter"  class="user">{{data?.name}}</span>
+      </ng-template>
+    </div>
+    <div class="col-md-6 my-4">
+      <h3>小説</h3>
+      <ng-template ngFor let-data [ngForOf]="novels">
+        <a *ngIf="data?.twitter" [href]="'https://twitter.com/' + data?.twitter" target="_blank">{{data?.name}}</a>
+        <span *ngIf="!data?.twitter"  class="user">{{data?.name}}</span>
+      </ng-template>
+    </div>
+    <div class="col-md-6 my-4">
+      <h3>企画</h3>
+      <a href="https://twitter.com/tn4mdg1" target="_blank">かなた</a>
+    </div>
+    <div class="col-md-6 my-4">
+      <h3>HP制作</h3>
+      <a href="https://misskey.io/@AureoleArk" target="_blank">村上さん</a>
+      <a href="https://twitter.com/geohikgl" target="_blank">蕎麦茶</a>
+    </div>
+    <div class="col-md-6 my-4">
+      <h3>デザインディレクター</h3>
+      <a href="763NM3" target="_blank">NM3</a>
+    </div>
+  </div>
+</div>
