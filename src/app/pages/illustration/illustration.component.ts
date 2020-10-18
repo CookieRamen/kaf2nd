@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {MetadataService} from '../../service/metadata.service';
 
 @Component({
   selector: 'app-illustration',
@@ -6,6 +7,16 @@ import {Component, OnInit} from '@angular/core';
   styleUrls: ['./illustration.component.scss']
 })
 export class IllustrationComponent implements OnInit {
+  metadata = {
+    title: 'イラスト | 花譜弐周年。',
+    description: '花譜弐周年を記念した有志によるイラスト',
+    keywords: '花譜,二周年,神椿,Vtuber,YouTube,Twitter,バーチャルシンガー,イラスト,二次創作',
+    image: '/assets/img/icon.png',
+    type: 'article',
+    url: window.location.href,
+    index: true
+  };
+
   preview;
   data = [
     {
@@ -182,7 +193,7 @@ export class IllustrationComponent implements OnInit {
       img: '9a503904.png',
       ratio: 1920 / 1080,
       position: 'center'
-    },{
+    }, {
       name: '若草',
       twitter: 'wakakusa_16',
       img: '9a503a80.png',
@@ -389,10 +400,13 @@ export class IllustrationComponent implements OnInit {
     }
   ];
 
-  constructor() {
+  constructor(
+    private metaService: MetadataService
+  ) {
   }
 
   ngOnInit(): void {
+    this.metaService.setMeta(this.metadata);
   }
 
 }

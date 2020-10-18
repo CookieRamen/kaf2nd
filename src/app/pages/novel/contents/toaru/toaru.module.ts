@@ -1,7 +1,7 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
 
-import { ToaruRoutingModule } from './toaru-routing.module';
+import {ToaruRoutingModule} from './toaru-routing.module';
 
 
 @NgModule({
@@ -11,4 +11,5 @@ import { ToaruRoutingModule } from './toaru-routing.module';
     ToaruRoutingModule
   ]
 })
-export class ToaruModule { }
+export class ToaruModule {
+}

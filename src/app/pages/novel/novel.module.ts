@@ -1,9 +1,9 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
 
-import { NovelRoutingModule } from './novel-routing.module';
-import { NovelComponent } from './novel.component';
-import { DeaiComponent } from './contents/deai/deai.component';
+import {NovelRoutingModule} from './novel-routing.module';
+import {NovelComponent} from './novel.component';
+import {DeaiComponent} from './contents/deai/deai.component';
 
 
 @NgModule({
@@ -13,4 +13,5 @@ import { DeaiComponent } from './contents/deai/deai.component';
     NovelRoutingModule
   ]
 })
-export class NovelModule { }
+export class NovelModule {
+}

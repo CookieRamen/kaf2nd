@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { ToaruComponent } from './toaru.component';
+import {ToaruComponent} from './toaru.component';
 
 describe('ToaruComponent', () => {
   let component: ToaruComponent;
@@ -8,9 +8,9 @@ describe('ToaruComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ToaruComponent ]
+      declarations: [ToaruComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

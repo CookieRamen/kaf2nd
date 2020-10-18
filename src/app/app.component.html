@@ -1,17 +1,17 @@
 <div class="menu-overlay">
-  <div class="button" [class.active]="menuActive" (click)="menuActive = !menuActive">
+  <div (click)="menuActive = !menuActive" [class.active]="menuActive" class="button">
     <span></span>
     <span></span>
     <span></span>
   </div>
 
-  <div class="menu-content" [class.active]="menuActive">
-    <a routerLink="/" (click)="menuActive = false">ホーム</a>
-    <a routerLink="/illustration" (click)="menuActive = false">イラスト</a>
-    <a routerLink="/comments" (click)="menuActive = false">コメント</a>
-    <a routerLink="/novel" (click)="menuActive = false">小説</a>
-    <a routerLink="/questionnaire" (click)="menuActive = false">アンケート</a>
-    <a routerLink="/history" (click)="menuActive = false">年表</a>
+  <div [class.active]="menuActive" class="menu-content">
+    <a (click)="menuActive = false" routerLink="/">ホーム</a>
+    <a (click)="menuActive = false" routerLink="/illustration">イラスト</a>
+    <a (click)="menuActive = false" routerLink="/comments">コメント</a>
+    <a (click)="menuActive = false" routerLink="/novel">小説</a>
+    <a (click)="menuActive = false" routerLink="/questionnaire">アンケート</a>
+    <a (click)="menuActive = false" routerLink="/history">年表</a>
   </div>
 </div>
 

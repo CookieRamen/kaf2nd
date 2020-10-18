@@ -1,8 +1,8 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
 
-import { QuestionnaireRoutingModule } from './questionnaire-routing.module';
-import { QuestionnaireComponent } from './questionnaire.component';
+import {QuestionnaireRoutingModule} from './questionnaire-routing.module';
+import {QuestionnaireComponent} from './questionnaire.component';
 import {NgxChartsModule} from '@swimlane/ngx-charts';
 
 
@@ -14,4 +14,5 @@ import {NgxChartsModule} from '@swimlane/ngx-charts';
     NgxChartsModule,
   ]
 })
-export class QuestionnaireModule { }
+export class QuestionnaireModule {
+}
