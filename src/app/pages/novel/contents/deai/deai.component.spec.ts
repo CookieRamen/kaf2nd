@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { DeaiComponent } from './deai.component';
+import {DeaiComponent} from './deai.component';
 
 describe('DeaiComponent', () => {
   let component: DeaiComponent;
@@ -8,9 +8,9 @@ describe('DeaiComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ DeaiComponent ]
+      declarations: [DeaiComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

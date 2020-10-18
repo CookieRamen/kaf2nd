@@ -9,11 +9,11 @@ import {MetadataService} from '../../service/metadata.service';
 export class IndexComponent implements OnInit, OnDestroy {
 
   metadata = {
-    title: 'index',
-    description: 'ページの説明',
-    keywords: '検索用キーワード',
-    image: 'ページの画像URL',
-    type: 'article',
+    title: '花譜弐周年。',
+    description: '花譜弐周年を記念した有志による非公式サイト',
+    keywords: '花譜,二周年,神椿,Vtuber,YouTube,Twitter,バーチャルシンガー',
+    image: '/assets/img/icon.png',
+    type: 'website',
     url: window.location.href,
     index: true
   };

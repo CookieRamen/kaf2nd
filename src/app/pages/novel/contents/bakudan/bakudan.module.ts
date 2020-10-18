@@ -1,8 +1,8 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
 
-import { BakudanRoutingModule } from './bakudan-routing.module';
-import { BakudanComponent } from './bakudan.component';
+import {BakudanRoutingModule} from './bakudan-routing.module';
+import {BakudanComponent} from './bakudan.component';
 
 
 @NgModule({
@@ -12,4 +12,5 @@ import { BakudanComponent } from './bakudan.component';
     BakudanRoutingModule
   ]
 })
-export class BakudanModule { }
+export class BakudanModule {
+}

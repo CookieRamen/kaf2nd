@@ -1,7 +1,7 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
 
-import { DeaiRoutingModule } from './deai-routing.module';
+import {DeaiRoutingModule} from './deai-routing.module';
 
 
 @NgModule({
@@ -11,4 +11,5 @@ import { DeaiRoutingModule } from './deai-routing.module';
     DeaiRoutingModule
   ]
 })
-export class DeaiModule { }
+export class DeaiModule {
+}

@@ -1,7 +1,7 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
 
-import { FuefukiRoutingModule } from './fuefuki-routing.module';
+import {FuefukiRoutingModule} from './fuefuki-routing.module';
 
 
 @NgModule({
@@ -11,4 +11,5 @@ import { FuefukiRoutingModule } from './fuefuki-routing.module';
     FuefukiRoutingModule
   ]
 })
-export class FuefukiModule { }
+export class FuefukiModule {
+}

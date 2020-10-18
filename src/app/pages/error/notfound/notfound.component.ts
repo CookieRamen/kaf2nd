@@ -9,10 +9,10 @@ import {MetadataService} from '../../../service/metadata.service';
 export class NotfoundComponent implements OnInit {
 
   metadata = {
-    title: '404 Not Found.',
+    title: '404 Not Found. | 花譜弐周年。',
     description: 'ページが見つかりませんでした',
     keywords: '',
-    image: '',
+    image: '/assets/img/icon.png',
     type: 'article',
     url: window.location.href,
     index: false
