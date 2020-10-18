@@ -21,6 +21,12 @@ export class IllustrationComponent implements OnInit {
       ratio: 677 / 677,
       position: 'center'
     }, {
+      name: '茶糸',
+      twitter: 'Persimmon__tea',
+      img: 'e5d1431d.jpg',
+      ratio: 2048 / 1041,
+      position: 'left center'
+    }, {
       name: 'komari@ヰ組',
       twitter: 'Kmr_tbk',
       img: '12e4176e.jpg',
