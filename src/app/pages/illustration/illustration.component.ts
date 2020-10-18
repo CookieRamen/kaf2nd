@@ -118,7 +118,7 @@ export class IllustrationComponent implements OnInit {
     }, {
       name: '匚白',
       twitter: 'Hakojiro_',
-      img: '9a502626.png',
+      img: '9a502176.png',
       ratio: 1280 / 1280,
       position: 'center'
     }, {
