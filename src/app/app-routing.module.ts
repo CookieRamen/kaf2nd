@@ -21,6 +21,9 @@ const routes: Routes = [
     path: 'questionnaire',
     loadChildren: () => import('./pages/questionnaire/questionnaire.module').then(m => m.QuestionnaireModule)
   }, {
+    path: 'participant',
+    loadChildren: () => import('./pages/participant/participant.module').then(m => m.ParticipantModule)
+  }, {
     path: '**',
     loadChildren: () => import('./pages/error/notfound/notfound.module').then(m => m.NotfoundModule)
   }
