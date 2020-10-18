@@ -9,7 +9,8 @@ export class ContentsComponent implements OnInit {
 
   constructor(
     private el: ElementRef
-  ) { }
+  ) {
+  }
 
   ngOnInit(): void {
     setTimeout(() => {

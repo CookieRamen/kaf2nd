@@ -1,7 +1,7 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
 
-import { IkikaiRoutingModule } from './ikikai-routing.module';
+import {IkikaiRoutingModule} from './ikikai-routing.module';
 
 
 @NgModule({
@@ -11,4 +11,5 @@ import { IkikaiRoutingModule } from './ikikai-routing.module';
     IkikaiRoutingModule
   ]
 })
-export class IkikaiModule { }
+export class IkikaiModule {
+}
